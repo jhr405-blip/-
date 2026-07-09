@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+news_today.json
+script.md
