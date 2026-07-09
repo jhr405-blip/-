@@ -1,0 +1,97 @@
+{
+  "_note": "generate_script.py 출력 형식의 샘플. 2026-07-09 수집 뉴스(news.json) 기반으로 작성됨. ANTHROPIC_API_KEY 설정 후 파이프라인을 돌리면 이 형식의 파일이 자동 생성된다.",
+  "video_title": "비트코인 6.2만 달러 후퇴, 연준 의사록이 흔든 시장",
+  "youtube_description": "6월 FOMC 의사록 공개 이후 비트코인이 6만 2천 달러까지 밀렸습니다. AI발 인플레이션 우려, ETF 자금 유출 재개, 선물 시장의 리스크 축소까지 — 오늘 하락의 배경을 정리했습니다.\n\n참고 자료:\n- 연준 6월 FOMC 의사록: federalreserve.gov\n- Bitcoin peels back to $62K as Fed-wary futures traders cut risk (cointelegraph.com)\n- AI boom fuels inflation fears, complicating Fed's next rate move (cointelegraph.com)\n- Bitcoin ETFs slip back to outflows (coindesk.com)\n- Bitcoin Slips to $62,000, Paring Rebound as CryptoQuant Sees Room Higher (bitcoinmagazine.com)\n\n※ 본 영상은 투자 권유가 아닌 정보 제공 목적입니다. 투자 판단과 책임은 본인에게 있습니다.",
+  "thumbnail": {
+    "line1": "비트코인 6.2만 달러 후퇴",
+    "line2": "연준 의사록에 무슨 말이?",
+    "handwriting": "랠리 끝? 아니면 눌림목?",
+    "image_prompt": "Photorealistic cinematic shot: a trader seen from behind looking at a large trading screen showing a falling Bitcoin price chart in red, dark trading floor, a printed document titled 'FOMC MINUTES' on the desk in the foreground, dramatic lighting, shallow depth of field, 16:9"
+  },
+  "slides": [
+    {
+      "title": "비트코인, 다시 6만 2천 달러로",
+      "bullets": [
+        {"text": "비트코인 62,000달러선까지 하락, 최근 반등분 대부분 반납", "highlight": "62,000달러선까지 하락"},
+        {"text": "핵심 지지선으로 꼽히던 60,000달러가 다시 시야에", "highlight": "60,000달러"},
+        {"text": "6월 FOMC 의사록 공개 직후 선물 시장에서 리스크 축소 움직임", "highlight": "6월 FOMC 의사록"},
+        {"text": "오늘 영상: 하락의 3가지 배경과 시장의 해석", "highlight": "3가지 배경"}
+      ],
+      "sources": ["cointelegraph.com", "bitcoinmagazine.com"],
+      "narration": "비트코인이 다시 6만 2천 달러까지 밀렸습니다. 최근 반등으로 회복했던 구간을 대부분 반납한 건데요. 시장에서 심리적 지지선으로 꼽는 6만 달러가 다시 눈앞에 온 상황입니다. 공교롭게도 이 하락, 어제 공개된 연준의 6월 FOMC 의사록 직후에 나왔거든요. 오늘은 이번 하락의 배경 세 가지와, 시장이 이걸 어떻게 읽고 있는지 순서대로 정리해 보겠습니다.",
+      "infographic_prompt": "손그림 스타일 인포그래픽: 비트코인 코인이 계단을 내려가는 그림, 계단에 '65K→62K→60K?' 숫자 표기, 아래에 걱정하는 표정의 투자자 캐릭터, 연필 스케치 느낌, 크림색 배경"
+    },
+    {
+      "title": "배경 ① 6월 FOMC 의사록",
+      "bullets": [
+        {"text": "6월 16~17일 회의 의사록, 7월 8일(현지) 공개", "highlight": "7월 8일(현지) 공개"},
+        {"text": "결정은 동결이었지만 의사록 곳곳에 인플레이션 경계 발언", "highlight": "인플레이션 경계"},
+        {"text": "일부 위원, 관세와 에너지 가격이 물가에 미칠 영향 우려", "highlight": "관세와 에너지 가격"},
+        {"text": "시장이 기대하던 연내 인하 시나리오에 물음표", "highlight": "연내 인하 시나리오에 물음표"}
+      ],
+      "sources": ["federalreserve.gov"],
+      "narration": "첫 번째 배경은 연준입니다. 6월 회의 의사록이 현지 시간 8일에 공개됐는데요. 회의 결과 자체는 금리 동결이라 새로울 게 없었지만, 의사록을 열어보니 분위기가 달랐습니다. 여러 위원이 인플레이션 경계 발언을 쏟아냈고, 특히 관세와 에너지 가격이 물가를 다시 자극할 수 있다는 우려가 담겼거든요. 시장이 기대해 온 연내 금리 인하 시나리오에 물음표가 붙으면서, 위험자산 전반이 움츠러들었습니다.",
+      "infographic_prompt": "손그림 스타일 인포그래픽: 'FOMC 의사록' 서류에서 말풍선이 나오는 그림, 말풍선 안에 '물가 아직 불안'이라는 한국어 텍스트, 옆에 놀라는 시장 캐릭터, 연필 스케치 느낌"
+    },
+    {
+      "title": "배경 ② AI 붐이 만든 인플레 우려",
+      "bullets": [
+        {"text": "AI 데이터센터 투자 급증이 전력·설비 가격을 밀어올리는 중", "highlight": "전력·설비 가격"},
+        {"text": "AI발 물가 상승이 연준의 다음 결정을 복잡하게 만든다는 분석", "highlight": "연준의 다음 결정을 복잡하게"},
+        {"text": "일본은행도 금리 인상 가속 가능성 — 글로벌 유동성 부담", "highlight": "일본은행도 금리 인상 가속"},
+        {"text": "위험자산에는 이중 악재: 미국 물가 + 글로벌 긴축", "highlight": "이중 악재"}
+      ],
+      "sources": ["cointelegraph.com", "coindesk.com"],
+      "narration": "두 번째는 조금 의외의 변수, AI입니다. AI 데이터센터 투자가 폭발적으로 늘면서 전력이랑 설비 가격이 밀려 올라가고 있는데요. 이게 물가를 자극해서 연준의 다음 결정을 복잡하게 만들고 있다는 분석이 나옵니다. 여기에 일본은행이 금리 인상 속도를 높일 수 있다는 경고까지 나왔어요. 미국 물가 부담에 글로벌 긴축 우려까지, 비트코인 같은 위험자산 입장에서는 이중 악재인 셈입니다.",
+      "infographic_prompt": "손그림 스타일 인포그래픽: 3단 화살표 다이어그램 — 'AI 데이터센터'(서버 그림) → '전력·설비 가격 상승'(온도계 그림) → '연준 고민'(고민하는 캐릭터), 한국어 라벨, 연필 스케치 느낌"
+    },
+    {
+      "title": "배경 ③ ETF 자금, 다시 빠진다",
+      "bullets": [
+        {"text": "비트코인 현물 ETF, 순유출로 전환", "highlight": "순유출로 전환"},
+        {"text": "직전까지 '기록적 유출 후 회복 중'이라는 평가였으나 다시 흔들", "highlight": "다시 흔들"},
+        {"text": "반면 이더리움 ETF는 순유입 흐름 유지 — 자금 온도차", "highlight": "이더리움 ETF는 순유입"},
+        {"text": "기관 수급이 단기 방향을 좌우하는 구조가 재확인됨", "highlight": "기관 수급"}
+      ],
+      "sources": ["coindesk.com", "decrypt.co"],
+      "narration": "세 번째는 수급입니다. 비트코인 현물 ETF가 다시 순유출로 돌아섰어요. 불과 며칠 전까지만 해도 기록적인 유출 이후 회복 중이라는 평가가 나왔는데, 의사록 공개와 함께 다시 흔들리는 모습입니다. 흥미로운 건 이더리움 ETF는 순유입 흐름을 유지하고 있다는 점인데요. 두 자산에 대한 기관의 온도차가 드러나는 대목입니다. 결국 지금 시장은 기관 수급이 단기 방향을 좌우하는 구조라는 게 다시 확인된 셈이죠.",
+      "infographic_prompt": "손그림 스타일 인포그래픽: 저울 그림 — 왼쪽 접시에 '비트코인 ETF 유출'(아래 화살표), 오른쪽 접시에 '이더리움 ETF 유입'(위 화살표), 한국어 라벨, 연필 스케치 느낌"
+    },
+    {
+      "title": "선물 시장은 어떻게 반응했나",
+      "bullets": [
+        {"text": "연준 경계감에 선물 트레이더들이 포지션 축소", "highlight": "포지션 축소"},
+        {"text": "레버리지 정리 과정에서 하락이 증폭되는 전형적 패턴", "highlight": "하락이 증폭"},
+        {"text": "CryptoQuant는 '온체인 지표상 추가 상승 여력 있다' 반론", "highlight": "추가 상승 여력"},
+        {"text": "파생 시장의 공포 vs 온체인의 낙관 — 해석이 갈리는 중", "highlight": "해석이 갈리는 중"}
+      ],
+      "sources": ["cointelegraph.com", "bitcoinmagazine.com"],
+      "narration": "파생상품 시장 반응도 볼까요. 연준 경계감이 커지자 선물 트레이더들이 포지션을 줄이기 시작했고, 레버리지가 정리되는 과정에서 하락 폭이 커지는 전형적인 패턴이 나왔습니다. 다만 반론도 있어요. 온체인 분석 업체 크립토퀀트는 지표상 아직 추가 상승 여력이 남아 있다고 봤거든요. 파생 시장의 공포와 온체인 데이터의 낙관이 부딪히면서, 지금 구간의 해석이 갈리고 있는 상황입니다.",
+      "infographic_prompt": ""
+    },
+    {
+      "title": "함께 볼 이슈: 규제 시계는 돌아간다",
+      "bullets": [
+        {"text": "CFTC 위원장 \"클래리티법 통과 매우 근접\" — 8월 시한 임박", "highlight": "클래리티법 통과 매우 근접"},
+        {"text": "와이든 의원, 법안 내 개발자 보호 조항 유지 촉구", "highlight": "개발자 보호 조항"},
+        {"text": "소니은행, 달러 스테이블코인 발행 위한 미국 신탁은행 조건부 승인", "highlight": "소니은행"},
+        {"text": "가격은 흔들려도 제도권 편입 흐름은 계속되는 중", "highlight": "제도권 편입 흐름은 계속"}
+      ],
+      "sources": ["bitcoinmagazine.com", "theblock.co", "cointelegraph.com"],
+      "narration": "가격만 보면 우울하지만, 제도 쪽 뉴스는 분위기가 다릅니다. CFTC 위원장이 크립토 시장 구조 법안인 클래리티법 통과가 매우 가깝다고 말했고요. 와이든 의원은 법안에서 개발자 보호 조항을 지켜야 한다고 목소리를 냈습니다. 여기에 소니은행이 달러 스테이블코인 발행을 위한 미국 신탁은행 조건부 승인까지 받았어요. 가격은 흔들려도, 제도권 편입이라는 큰 흐름은 멈추지 않고 있다는 겁니다.",
+      "infographic_prompt": "손그림 스타일 인포그래픽: 시계 그림 중앙에 '규제 시계', 시계 주변에 '클래리티법', '스테이블코인 은행', '개발자 보호' 한국어 라벨 3개, 연필 스케치 느낌"
+    },
+    {
+      "title": "정리: 눌림목인가, 추세 전환인가",
+      "bullets": [
+        {"text": "하락 배경: 연준 의사록 + AI발 인플레 우려 + ETF 유출", "highlight": "연준 의사록 + AI발 인플레 우려 + ETF 유출"},
+        {"text": "단기 관건: 60,000달러 지지 여부와 ETF 자금 방향", "highlight": "60,000달러 지지 여부"},
+        {"text": "중기 변수: 클래리티법 등 규제 이벤트가 반등 재료 될 수도", "highlight": "규제 이벤트"},
+        {"text": "본 영상은 투자 권유가 아닌 정보 제공 목적입니다", "highlight": ""}
+      ],
+      "sources": ["federalreserve.gov", "coindesk.com", "cointelegraph.com"],
+      "narration": "정리하겠습니다. 이번 하락은 연준 의사록의 매파적 뉘앙스, AI가 만든 인플레이션 우려, 그리고 ETF 자금 유출이 겹친 결과였습니다. 단기적으로는 6만 달러 지지 여부와 ETF 자금이 언제 유입으로 돌아서는지가 관건이고요. 중기적으로는 클래리티법 같은 규제 이벤트가 반등의 재료가 될 수 있습니다. 눌림목이냐 추세 전환이냐, 여러분의 생각은 어떠신가요. 댓글로 남겨주시고, 저는 내일 뉴스로 다시 찾아오겠습니다.",
+      "infographic_prompt": ""
+    }
+  ]
+}
