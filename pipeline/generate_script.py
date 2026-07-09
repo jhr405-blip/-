@@ -14,13 +14,16 @@ collect_news.py가 만든 뉴스 JSON을 Claude API에 넣어
 사용법:
     python3 pipeline/generate_script.py news_today.json -o script.md
     python3 pipeline/generate_script.py news_today.json --topic "비트코인 ETF"
+
+API 키 없이 쓰기 (복붙 모드):
+    python3 pipeline/generate_script.py news_today.json --prompt-only -o prompt.txt
+    → prompt.txt 내용을 claude.ai(또는 ChatGPT)에 통째로 붙여넣으면
+      같은 형식의 대본이 나온다. 구독만 있으면 API 키 불필요.
 """
 
 import argparse
 import json
 import sys
-
-import anthropic
 
 MODEL = "claude-opus-4-8"
 
@@ -101,11 +104,35 @@ def to_markdown(v: dict) -> str:
     return "\n".join(lines)
 
 
+PROMPT_ONLY_FORMAT = """\
+아래 형식의 마크다운으로 출력하라:
+
+# (영상 제목, 40자 이내)
+
+## 썸네일
+- 첫 줄: (큰 글씨 문구)
+- 둘째 줄(강조): (강조색 문구)
+- 손글씨 후킹: (한 줄)
+- 배경 이미지 프롬프트: (photorealistic cinematic 스타일의 영어 프롬프트, 16:9)
+
+## 대본
+### 1. (섹션 소제목)
+(나레이션 250~350자)
+> 출처: (기사 도메인)
+(...섹션 5~8개 반복...)
+
+## 유튜브 설명란
+(참고 기사 제목·출처 포함)
+"""
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("news_json", help="collect_news.py 출력 파일")
     ap.add_argument("-o", "--output", default="script.md")
     ap.add_argument("--topic", default="", help="주제를 지정하고 싶을 때 (없으면 AI가 선정)")
+    ap.add_argument("--prompt-only", action="store_true",
+                    help="API 호출 없이 claude.ai/ChatGPT에 붙여넣을 프롬프트만 생성")
     args = ap.parse_args()
 
     with open(args.news_json, encoding="utf-8") as f:
@@ -124,6 +151,21 @@ def main() -> None:
         if args.topic
         else "아래 기사 중 조회수가 가장 잘 나올 만한 주제 하나를 골라라. 여러 기사가 겹치는 이슈일수록 좋다."
     )
+
+    if args.prompt_only:
+        prompt = (
+            f"{SYSTEM_PROMPT}\n{topic_line}\n\n"
+            f"오늘({news['collected_at'][:10]}) 수집된 뉴스 {len(articles)}건:\n"
+            f"{article_block}\n\n"
+            f"위 뉴스로 영상 1편의 대본을 작성하라. {PROMPT_ONLY_FORMAT}"
+        )
+        with open(args.output, "w", encoding="utf-8") as f:
+            f.write(prompt)
+        print(f"프롬프트 저장 → {args.output}")
+        print("이 파일 내용을 claude.ai 또는 ChatGPT에 통째로 붙여넣으세요.")
+        return
+
+    import anthropic  # API 모드에서만 필요
 
     client = anthropic.Anthropic()
 

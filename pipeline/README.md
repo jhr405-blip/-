@@ -9,21 +9,31 @@
 [3] (사람) 녹음·편집      script.md 읽으면서 녹음, 썸네일 프롬프트로 배경 이미지 생성
 ```
 
-## 설치
+## 사용 방법 — 둘 중 하나 선택
+
+### 방법 A: API 키 없이 (복붙 모드, 무료)
+
+```bash
+python3 pipeline/collect_news.py -o news_today.json
+python3 pipeline/generate_script.py news_today.json --prompt-only -o prompt.txt
+```
+
+`prompt.txt` 내용을 **claude.ai 또는 ChatGPT에 통째로 붙여넣으면** 대본이 나온다.
+이미 쓰고 있는 챗봇 구독으로 충분하고, 추가 비용 없음.
+
+### 방법 B: API 키로 완전 자동화
 
 ```bash
 pip install anthropic
 export ANTHROPIC_API_KEY=sk-ant-...   # platform.claude.com 에서 발급
-```
 
-## 매일 돌리는 명령 (2줄)
-
-```bash
 python3 pipeline/collect_news.py -o news_today.json
 python3 pipeline/generate_script.py news_today.json -o script.md
 ```
 
-`script.md` 하나에 전부 들어 있다:
+붙여넣기 과정 없이 `script.md`가 바로 생성된다 (편당 약 $0.3).
+
+어느 방법이든 결과물(대본) 하나에 전부 들어 있다:
 
 | 항목 | 내용 |
 |---|---|
@@ -51,7 +61,8 @@ python3 pipeline/generate_script.py news_today.json --topic "이더리움 ETF"
 
 ## 비용
 
-Claude API (Opus 4.8) 기준 영상 1편당 약 $0.3 내외.
+- 방법 A (복붙): 무료 (기존 챗봇 구독으로 커버)
+- 방법 B (API): Claude API (Opus 4.8) 기준 영상 1편당 약 $0.3 내외
 
 ## 주의
 
